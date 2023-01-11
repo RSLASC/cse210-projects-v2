@@ -64,12 +64,12 @@ class Program
 
         Random rnd = new Random();
 
-        int hiddenNumber = (rnd.Next(1, 100)); // returns random integers between 1 and 100
+        int hiddenNumber = (rnd.Next(1, 101)); // returns random integers between 1 and 100
         
         string continueGame = "yes";
         while (continueGame == "yes")
         {
-            
+
             while (hiddenNumber != userNumber)
             {
                 Console.Write("What is your guess?: ");
@@ -107,7 +107,7 @@ class Program
             else
             {
                 rnd = new Random();
-                hiddenNumber = (rnd.Next(1, 100));
+                hiddenNumber = (rnd.Next(1, 101));
                 guesses = 1;
             }
 

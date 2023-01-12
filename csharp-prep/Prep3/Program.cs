@@ -1,3 +1,4 @@
+/*This activity will help you learn to work with LOOPS in C#.*/
 using System;
 
 class Program

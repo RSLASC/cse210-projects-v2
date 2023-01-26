@@ -5,13 +5,12 @@ class Program
     {
         static void Main(string[] args)
         {
-            Journal startProgram = new Journal();
+            Journal _startProgram = new Journal();
 
-            while (startProgram.userOption != "5")
+            while (_startProgram._userOption != "5")
             {
                 Console.Clear();
-                startProgram.DisplayMenu();
-                
+                _startProgram.DisplayMenu();
             }
 
             

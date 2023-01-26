@@ -1,44 +1,48 @@
 public class Journal{
-    public string userOption = "";
-    public int number;
-    public void DisplayMenu(){
 
+    public string _userOption = "";
+
+    public int _auxNumber;
+
+    public void DisplayMenu()
+    {
         Console.WriteLine("Welcome to your Journal app!");
         Console.WriteLine("Please choose one of the available options: ");
         Console.WriteLine("1-   Write\n2-   Display the Journal\n3-   Load\n4-   Save\n5-   Quit");
 
         Console.Write("What would you like to do?:\n> ");
-        userOption = Console.ReadLine();    
+        _userOption = Console.ReadLine();    
         
-        optionSelected(userOption); 
+        optionSelected(_userOption); 
+
     }
-    private void optionSelected(string userOption){
+    
+    private void optionSelected(string chosenOption){
 
         //START - main validation idea taken from: https://www.tutorialsteacher.com/articles/convert-string-to-int 
         
-        /*Explanation about line 24-37 -->
+        /*BLOCK: Explanation about line 24-37 -->
         Each input given in the option menu will be evaluated. If it's a number between 1-5, will display the corresponding action.
         Otherwise, it will repeat the message "Please insert an option from 1 to 5." Until the user give the correct input.
         This way, we ensure that no other input than 1-5 is accepted, meaning that 
         */
 
-        bool isParsable = false;
+        bool _isParsable = false;
         
-
-        while (isParsable == false || (number <1 || number > 5))
+        while (_isParsable == false || (_auxNumber <1 || _auxNumber > 5))
         {
-            isParsable = Int32.TryParse(userOption, out number);
+            _isParsable = Int32.TryParse(chosenOption, out _auxNumber);
 
-            if (isParsable == false || (number > 5 || number < 1))
+            if (_isParsable == false || (_auxNumber > 5 || _auxNumber < 1))
             {
                     Console.WriteLine("Please insert an option from 1 to 5. ");
-                    userOption = Console.ReadLine();  
+                    chosenOption = Console.ReadLine();  
             }
 
         }
         // END idea
 
-        if(userOption == "1")       //Write
+        if(chosenOption == "1")       //Write
         {
             Console.Clear();
             Console.WriteLine("You choose Option 1- Write an entry.");
@@ -49,16 +53,19 @@ public class Journal{
             Console.ReadKey();
 
         }
-        else if(userOption == "2")  //Display
+        else if(chosenOption == "2")  //Display
         {
             Console.Clear();
-            Console.WriteLine("You choose Option 2- Display entries.");
+            Console.WriteLine("You choose Option 2- Display journal.");
             
+            Entry entry = new Entry();
+
+
             Console.WriteLine("Display option in progress.");
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }
-        else if(userOption == "3")  //Load
+        else if(chosenOption == "3")  //Load
         {
             Console.Clear();
             Console.WriteLine("You choose Option 3- Load Journal.");
@@ -68,7 +75,7 @@ public class Journal{
             Console.ReadKey();
 
         }
-        else if(userOption == "4")  //Save
+        else if(chosenOption == "4")  //Save
         {
             Console.Clear();
             Console.WriteLine("You choose Option 4- Save Journal.");
@@ -77,7 +84,7 @@ public class Journal{
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }
-        else if(userOption == "5")  //Quit
+        else if(chosenOption == "5")  //Quit
         {
             Console.Clear();
             Console.WriteLine("You choose Option 5- Quit program.");
@@ -92,8 +99,12 @@ public class Journal{
             Console.ReadKey();
         }
     }
+
 }
+
+/*Sandbox
 //     private int ParseString(string userText){
+    
 //         bool isParsable = false;
 //         int number;
 
@@ -114,3 +125,6 @@ public class Journal{
 //     }
 
 // }
+*/
+
+//

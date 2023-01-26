@@ -16,13 +16,14 @@ public class PromptGenerator{
         Random rnd = new Random();
         newEntry._Prompt = _Questions[rnd.Next(0, _Questions.Count)];   // Return a random question between 0-index and max-index.
  
-        Console.WriteLine(newEntry._Prompt); 
-
-        Console.Write("Please insert an entry: ");
-        newEntry._UserInput = Console.ReadLine();
+        Console.WriteLine("Please insert an entry\n"); 
 
         DateTime theCurrentTime = DateTime.Now;
         newEntry._DateTime = theCurrentTime.ToShortDateString();
+
+        Console.Write($"{newEntry._Prompt}\n{newEntry._DateTime} > ");
+        newEntry._UserInput = Console.ReadLine();
+
         
     }
     

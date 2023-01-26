@@ -1,0 +1,43 @@
+Class:
+
+1. Write Class
+-Allow the user to input a journal/text entry.
+-Allow user to choose from the option of answering
+questions/ writing an entry.
+-Gives 5 good questions for user to answer.
+-Random questions will show up everytime the user
+choose "write" option.
+
+Write Class Variables:
+-List questions (5 questions)
+-String userEntry for user's journal entry
+-String dateText for the current date
+
+2. Display Class
+-Everytime the user choose display, the program will
+diplay from the file that's loaded.
+(with the date the journal was written.)
+
+Display Class Variables:
+-String filename which is a name of a text file.
+
+
+3. Save Class
+-This class will save the journal entry that was
+entered by the user.
+
+Save Class Variables:
+-String inputFileName to allow user to write the
+filename.
+-List userEntry from the user's entry.
+
+4. Load Class
+-This class will load the file that was saved by the
+user as journal entry.
+
+Load Class Variables:
+-string enterFileName allows user to load a specific
+file by writing its name.
+
+
+

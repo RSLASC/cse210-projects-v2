@@ -12,6 +12,7 @@ public class PromptGenerator{
 
     public void DisplayQuestion()
     {
+     
         
         Entry _NewEntry = new Entry();
 

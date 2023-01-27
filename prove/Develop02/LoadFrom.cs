@@ -5,5 +5,6 @@ public class LoadFrom{
     public void LoadFileFrom(string _enterFileName)
     {
 
-    }
+    } 
+    
 }

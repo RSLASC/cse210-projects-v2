@@ -13,7 +13,8 @@ public class Entry{
     // public string _prompt = "";
 
     public void Display()
-    {
+    { 
+        
         // foreach (var item in collection)
         // {
             

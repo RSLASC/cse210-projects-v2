@@ -10,7 +10,8 @@ public class PromptGenerator{
         "Describe something about your day that you would like your descendants knows about"
     };
 
-    public void DisplayQuestion(){
+    public void DisplayQuestion()
+    {
         
         Entry _NewEntry = new Entry();
 
@@ -27,14 +28,20 @@ public class PromptGenerator{
         Console.WriteLine("Please insert an entry based on the next prompt, or feel free to write your thought\n"); 
         
         Random rnd = new Random();
-        _NewEntry._Prompt = _Questions[rnd.Next(0, _Questions.Count)];   // Return a random question between 0-index and max-index.
+        string tempPrompt = _Questions[rnd.Next(0, _Questions.Count)];
+        _NewEntry._prompt.Add(tempPrompt);                                  // Return a random question between 0-index and max-index. -list of string
+        // _NewEntry._prompt = _Questions[rnd.Next(0, _Questions.Count)];   // Return a random question between 0-index and max-index. -string
  
 
         DateTime theCurrentTime = DateTime.Now;
-        _NewEntry._DateTime = theCurrentTime.ToShortDateString();
+        string tempDateTime = theCurrentTime.ToShortDateString();
+        _NewEntry._dateText.Add(tempDateTime);                              //list of string
+        // _NewEntry._dateText = theCurrentTime.ToShortDateString();        //string
 
-        Console.Write($"{_NewEntry._Prompt}\n{_NewEntry._DateTime} > ");
-        _NewEntry._UserInput = Console.ReadLine();
+        
+        Console.Write($"{_NewEntry._prompt.Last()}\n{_NewEntry._dateText.Last()} > ");
+        _NewEntry._userEntry.Add(Console.ReadLine());                       //list of string
+        // _NewEntry._userEntry = Console.ReadLine();                       //string
 
         
     }

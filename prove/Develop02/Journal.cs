@@ -4,6 +4,7 @@ public class Journal{
 
     public int _auxNumber;
 
+
     public void DisplayMenu()
     {
         Console.WriteLine("Welcome to your Journal app!");
@@ -17,7 +18,8 @@ public class Journal{
 
     }
     
-    private void optionSelected(string chosenOption){
+    private void optionSelected(string chosenOption)
+    {
 
         //START - main validation idea taken from: https://www.tutorialsteacher.com/articles/convert-string-to-int 
         
@@ -60,6 +62,7 @@ public class Journal{
             
             Entry entry = new Entry();
 
+            
 
             Console.WriteLine("Display option in progress.");
             Console.WriteLine("Press any key to continue.");

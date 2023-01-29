@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 public class PromptGenerator{
 
-    List<string> _Questions = new List<string>
+    List<string> _questions = new List<string>
     {
         "What was the best part of my day?",
         "What was the strongest emotion I felt today?",
@@ -12,8 +12,7 @@ public class PromptGenerator{
 
     public void DisplayQuestion()
     {
-     
-        
+
         Entry _NewEntry = new Entry();
 
         /* BLOCK: List defined inside the function. Need to verify pros and cons
@@ -29,7 +28,7 @@ public class PromptGenerator{
         Console.WriteLine("Please insert an entry based on the next prompt, or feel free to write your thought\n"); 
         
         Random rnd = new Random();
-        string tempPrompt = _Questions[rnd.Next(0, _Questions.Count)];
+        string tempPrompt = _questions[rnd.Next(0, _questions.Count)];
         _NewEntry._prompt.Add(tempPrompt);                                  // Return a random question between 0-index and max-index. -list of string
         // _NewEntry._prompt = _Questions[rnd.Next(0, _Questions.Count)];   // Return a random question between 0-index and max-index. -string
  
@@ -44,6 +43,7 @@ public class PromptGenerator{
         _NewEntry._userEntry.Add(Console.ReadLine());                       //list of string
         // _NewEntry._userEntry = Console.ReadLine();                       //string
 
+        
         
     }
     

@@ -15,13 +15,23 @@ public class Entry{
     public void Display()
     { 
         
-        // foreach (var item in collection)
+        // foreach (var item in _userEntry)
         // {
-            
+        //     Console.WriteLine(item);
         // }
         
     }
 
+    public void SaveEntryInJournal(Entry _variableName)
+    {   
+        
+
+    }
+
 }
+
+
+
+
 
 

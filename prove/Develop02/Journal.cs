@@ -10,7 +10,7 @@ public class Journal{
         Console.WriteLine("Welcome to your Journal app!");
         Console.WriteLine("Please choose one of the available options: ");
         Console.WriteLine("1-   Write\n2-   Display the Journal\n3-   Load\n4-   Save\n5-   Quit");
-
+        
         Console.Write("What would you like to do?:\n> ");
         _userOption = Console.ReadLine();    
         
@@ -51,6 +51,7 @@ public class Journal{
             PromptGenerator _questions = new PromptGenerator();
             _questions.DisplayQuestion();
 
+
             Console.WriteLine("Your entry still not saved in any document.\nPress any key to continue.");
             Console.ReadKey();
 
@@ -61,7 +62,7 @@ public class Journal{
             Console.WriteLine("You choose Option 2- Display journal.");
             
             Entry entry = new Entry();
-
+            entry.Display();
             
 
             Console.WriteLine("Display option in progress.");
@@ -96,7 +97,7 @@ public class Journal{
             Console.WriteLine("Press any key to close the program.");
             Console.ReadKey();
         }
-        else                        //Incorrent input
+        else                          //Incorrent input
         {
             Console.WriteLine("Input not handled");
             Console.ReadKey();
